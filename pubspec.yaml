@@ -1,0 +1,35 @@
+name: smarthas_flutter
+description: Smart HAS — Sistema inteligente (Sociedade 5.0) com Flutter + Riverpod.
+publish_to: "none"
+version: 0.2.0+2
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  font_awesome_flutter: ^10.7.0
+  flutter_riverpod: ^2.5.1
+  dio: ^5.5.0+1
+  shared_preferences: ^2.2.3
+  flutter_local_notifications: ^17.2.1
+  intl: ^0.20.2
+  uuid: ^4.4.2
+  mobile_scanner: ^5.1.1
+  http: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/seed/suggestions.json
+    - assets/seed/foods.json
+    - assets/seed/recipes.json

@@ -1,0 +1,65 @@
+name: ci-cd-smart-has
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    services:
+      oracle:
+        image: gvenzl/oracle-xe:21-slim
+        ports:
+          - 1521:1521
+        env:
+          ORACLE_PASSWORD: oracle
+        options: >-
+          --health-cmd="su -p oracle -c 'echo \"select 1 from dual;\" | sqlplus -s system/oracle@localhost/XEPDB1'"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Wait for Oracle XE to be healthy
+        run: |
+          for i in {1..60}; do
+            docker ps
+            echo "probe $i"
+            if docker exec $(docker ps -q --filter ancestor=gvenzl/oracle-xe:21-slim) bash -lc "echo 'select 1 from dual;' | sqlplus -s system/oracle@localhost/XEPDB1"; then
+              echo "Oracle is up"
+              break
+            fi
+            sleep 5
+          done
+      - name: Seed database schema
+        run: |
+          CONTAINER_ID=$(docker ps -q --filter ancestor=gvenzl/oracle-xe:21-slim)
+          for f in schema.sql seed.sql functions.sql procedures.sql 06_packages.sql 07_triggers.sql; do
+            if [ -f db/sql/$f ]; then
+              docker cp db/sql/$f $CONTAINER_ID:/tmp/$f
+              docker exec $CONTAINER_ID bash -lc "echo '@/tmp/$f' | sqlplus -s system/oracle@localhost/XEPDB1"
+            fi
+          done
+      - name: Build Spring Boot backend
+        if: ${{ hashFiles('**/pom.xml') != '' }}
+        run: |
+          if [ -f server-backend/pom.xml ]; then
+            mvn -f server-backend -B -DskipTests=false clean verify
+          else
+            mvn -B -DskipTests=false clean verify
+          fi
+      - name: Publish build artifact (jar)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-backend-jar
+          path: |
+            **/target/*.jar
+            !**/*-sources.jar
+            !**/*-javadoc.jar

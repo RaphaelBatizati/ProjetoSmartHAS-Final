@@ -1,0 +1,10 @@
+
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - prefer_final_locals
+    - avoid_print
+    - always_use_package_imports
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables

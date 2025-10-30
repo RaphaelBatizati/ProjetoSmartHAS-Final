@@ -1,0 +1,94 @@
+{
+  "foods": [
+    {
+      "barcode": "7894900011517",
+      "name": "Iogurte Natural",
+      "category": "Laticínios",
+      "cal": 61,
+      "protein": 3.5,
+      "carbs": 4.7,
+      "fat": 3.3
+    },
+    {
+      "barcode": "7891000100101",
+      "name": "Aveia em Flocos",
+      "category": "Grãos",
+      "cal": 389,
+      "protein": 16.9,
+      "carbs": 66.3,
+      "fat": 6.9
+    },
+    {
+      "barcode": "7894900700015",
+      "name": "Leite Desnatado",
+      "category": "Laticínios",
+      "cal": 34,
+      "protein": 3.4,
+      "carbs": 5.1,
+      "fat": 0.1
+    },
+    {
+      "barcode": "7891000055128",
+      "name": "Atum em Água (Lata)",
+      "category": "Proteínas",
+      "cal": 116,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "fat": 1.0
+    },
+    {
+      "barcode": "7891910000197",
+      "name": "Feijão Carioca",
+      "category": "Grãos",
+      "cal": 127,
+      "protein": 8.8,
+      "carbs": 22.8,
+      "fat": 0.5
+    },
+    {
+      "barcode": "7894900060010",
+      "name": "Banana Nanica (unidade)",
+      "category": "Frutas",
+      "cal": 89,
+      "protein": 1.1,
+      "carbs": 22.8,
+      "fat": 0.3
+    },
+    {
+      "barcode": "7896029050018",
+      "name": "Peito de Frango (bandeja)",
+      "category": "Proteínas",
+      "cal": 165,
+      "protein": 31.0,
+      "carbs": 0.0,
+      "fat": 3.6
+    },
+    {
+      "barcode": "7896004000012",
+      "name": "Arroz Integral",
+      "category": "Grãos",
+      "cal": 111,
+      "protein": 2.6,
+      "carbs": 22.9,
+      "fat": 0.9
+    },
+    {
+      "barcode": "7896029000000",
+      "name": "Abacate (unidade)",
+      "category": "Frutas",
+      "cal": 160,
+      "protein": 2.0,
+      "carbs": 9.0,
+      "fat": 15.0
+    },
+    {
+      "barcode": "7894900530018",
+      "name": "Cenoura (unidade)",
+      "category": "Vegetais",
+      "cal": 41,
+      "protein": 0.9,
+      "carbs": 9.6,
+      "fat": 0.2
+    }
+  ]
+}

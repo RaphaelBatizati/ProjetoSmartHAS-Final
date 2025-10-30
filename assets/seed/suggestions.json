@@ -1,0 +1,22 @@
+{
+  "suggestions": [
+    {
+      "id": "s1",
+      "title": "Beber água",
+      "reason": "Hidrate-se a cada 2h",
+      "score": 0.9
+    },
+    {
+      "id": "s2",
+      "title": "Pausa ativa",
+      "reason": "Alongue-se por 5 minutos",
+      "score": 0.7
+    },
+    {
+      "id": "s3",
+      "title": "Sono",
+      "reason": "Estabeleça horário consistente para dormir",
+      "score": 0.8
+    }
+  ]
+}

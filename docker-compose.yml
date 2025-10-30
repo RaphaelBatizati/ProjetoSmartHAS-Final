@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  oracle:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: smarthas-oracle
+    environment:
+      - ORACLE_PASSWORD=oracle
+      - APP_USER=smarthas
+      - APP_USER_PASSWORD=smarthas
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - ./db/sql:/container-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'select 1 from dual;' | sqlplus -s system/oracle@//localhost:1521/XEPDB1 | grep -q 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 20

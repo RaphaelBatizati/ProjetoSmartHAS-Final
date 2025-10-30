@@ -1,0 +1,15 @@
+com\codang\config\WebConfig$1.class
+com\codang\profile\ProfileController$1.class
+com\codang\repo\AlertRepository.class
+com\codang\ServerApplication.class
+com\codang\profile\Profile.class
+com\codang\sensors\SensorController.class
+com\codang\HomeController.class
+com\codang\profile\CalorieHelperController.class
+com\codang\repo\IndicatorRepository.class
+com\codang\config\WebConfig.class
+com\codang\web\ApiController.class
+com\codang\ai\AiController.class
+com\codang\db\OraclePlsqlController.class
+com\codang\repo\ReportRepository.class
+com\codang\profile\ProfileController.class

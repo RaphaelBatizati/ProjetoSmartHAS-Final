@@ -1,0 +1,72 @@
+{
+  "recipes": [
+    {
+      "id": "r1",
+      "title": "Overnight Oats Proteico",
+      "ingredients": [
+        "Aveia em Flocos",
+        "Iogurte Natural",
+        "Banana"
+      ],
+      "instructions": "Misture aveia, iogurte e banana picada. Deixe na geladeira à noite.",
+      "tags": [
+        "rápido",
+        "saudável",
+        "café da manhã"
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Frango com Arroz Integral",
+      "ingredients": [
+        "Peito de Frango",
+        "Arroz Integral",
+        "Cenoura"
+      ],
+      "instructions": "Grelhe o frango, cozinhe o arroz integral e salteie a cenoura.",
+      "tags": [
+        "almoço",
+        "alto teor proteico"
+      ]
+    },
+    {
+      "id": "r3",
+      "title": "Salada de Atum e Abacate",
+      "ingredients": [
+        "Atum em Água (Lata)",
+        "Abacate"
+      ],
+      "instructions": "Misture atum e abacate. Tempere a gosto.",
+      "tags": [
+        "keto",
+        "rápido"
+      ]
+    },
+    {
+      "id": "r4",
+      "title": "Feijão com Arroz Integral",
+      "ingredients": [
+        "Feijão Carioca",
+        "Arroz Integral"
+      ],
+      "instructions": "Cozinhe o feijão e sirva com arroz integral.",
+      "tags": [
+        "tradicional",
+        "fibras"
+      ]
+    },
+    {
+      "id": "r5",
+      "title": "Vitamina de Banana e Leite",
+      "ingredients": [
+        "Banana Nanica (unidade)",
+        "Leite Desnatado"
+      ],
+      "instructions": "Bata no liquidificador e sirva gelado.",
+      "tags": [
+        "lanche",
+        "rápido"
+      ]
+    }
+  ]
+}
